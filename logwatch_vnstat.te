@@ -1,0 +1,15 @@
+module logwatch_vnstat 1.3;
+
+require {
+	type vnstatd_var_lib_t;
+	type vnstat_exec_t;
+	type logwatch_t;
+        class dir read;
+	class file { execute execute_no_trans lock open read };
+}
+
+#============= logwatch_t ==============
+allow logwatch_t vnstat_exec_t:file { execute execute_no_trans open read };
+allow logwatch_t vnstatd_var_lib_t:dir read;
+allow logwatch_t vnstatd_var_lib_t:file { lock open read };
+
