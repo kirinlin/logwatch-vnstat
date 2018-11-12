@@ -1,6 +1,6 @@
 # logwatch-vnstat
 
-A small projects about `logwatch` and `vnstat`.
+A small project about `logwatch` and `vnstat`.
 
 ## Add `vnstat` in Logwatch
 
